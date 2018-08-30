@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    tools:context="com.tableboy.crazytipcalc.CrazyTipCalcActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_bill"
+        android:text="@string/bill_text_view"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/edit_text_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:ems="4"
+        android:hint="@string/bill_edit_text_view"
+        android:inputType="numberDecimal"
+        android:layout_alignBaseline="@+id/text_view_bill"
+        android:layout_alignBottom="@+id/text_view_bill"
+        android:layout_toRightOf="@+id/text_view_bill"
+        android:layout_toEndOf="@+id/text_view_bill" />
+
+    <TextView
+        android:id="@+id/text_view_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_text_view"
+        android:layout_alignBaseline="@+id/edit_text_tip"
+        android:layout_alignBottom="@+id/edit_text_tip"
+        android:layout_toLeftOf="@+id/edit_text_tip"
+        android:layout_toStartOf="@+id/edit_text_tip"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <EditText
+        android:id="@+id/edit_text_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:text="@string/tip_edit_text_view"
+        android:inputType="numberDecimal"
+        android:layout_above="@+id/text_view_final_bill"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/text_view_final_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/final_text_view"
+        android:layout_below="@+id/edit_text_bill"
+        android:layout_toRightOf="@+id/chronometer_time_waiting"
+        android:layout_toEndOf="@+id/chronometer_time_waiting" />
+
+    <EditText
+        android:id="@+id/edit_text_final_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_final_bill"
+        android:layout_marginLeft="54dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/edit_text_bill"
+        android:layout_toRightOf="@+id/edit_text_bill"
+        android:ems="5"
+        android:hint="@string/final_edit_text_view"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/text_view_change_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_tip_text_view"
+        android:layout_above="@+id/seek_bar_change_tip"
+        android:layout_toRightOf="@+id/text_view_bill"
+        android:layout_toEndOf="@+id/text_view_bill" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_change_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="15"
+        android:layout_alignTop="@+id/edit_text_final_bill"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/check_box_specials"
+        android:layout_toStartOf="@+id/check_box_specials" />
+
+    <TextView
+        android:id="@+id/text_view_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/into_text_view"
+        android:layout_below="@+id/seek_bar_change_tip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <CheckBox
+        android:id="@+id/check_box_friendly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/intro_friendly_text_view"
+        android:layout_below="@+id/text_view_intro"
+        android:layout_alignLeft="@+id/text_view_intro"
+        android:layout_alignStart="@+id/text_view_intro" />
+
+    <CheckBox
+        android:id="@+id/check_box_specials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_specials_text_view"
+        android:layout_alignBaseline="@+id/check_box_friendly"
+        android:layout_alignBottom="@+id/check_box_friendly"
+        android:layout_alignRight="@+id/button_pause"
+        android:layout_alignEnd="@+id/button_pause" />
+
+    <CheckBox
+        android:id="@+id/check_box_opinion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_opinion_text_view"
+        android:layout_alignBaseline="@+id/check_box_specials"
+        android:layout_alignBottom="@+id/check_box_specials"
+        android:layout_alignLeft="@+id/text_view_final_bill"
+        android:layout_alignStart="@+id/text_view_final_bill" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/available_text_view"
+        android:layout_below="@+id/check_box_friendly"
+        android:layout_alignLeft="@+id/check_box_friendly"
+        android:layout_alignStart="@+id/check_box_friendly" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/radio_group_availability"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/radio_button_bad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_bad_radio_button" />
+
+        <RadioButton
+            android:id="@+id/radio_button_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_ok_radio_button" />
+
+        <RadioButton
+            android:id="@+id/radio_button_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_good_radio_button" />
+
+    </RadioGroup>
+
+
+    <Spinner
+        android:id="@+id/spinner_problem_solve"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:entries="@array/problem_solving"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/radio_group_availability"
+        android:layout_alignRight="@+id/text_view_tip"
+        android:layout_alignEnd="@+id/text_view_tip"
+        android:layout_alignLeft="@+id/text_view_bill"
+        android:layout_alignStart="@+id/text_view_bill" />
+
+    <TextView
+        android:id="@+id/text_view_time_waiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_waiting_text_view"
+        android:layout_below="@+id/spinner_problem_solve"
+        android:layout_toLeftOf="@+id/edit_text_final_bill"
+        android:layout_toStartOf="@+id/edit_text_final_bill"
+        android:layout_marginTop="27dp" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_chronometer_button"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/text_view_time_waiting"
+        android:layout_alignRight="@+id/check_box_friendly"
+        android:layout_alignEnd="@+id/check_box_friendly" />
+
+    <Button
+        android:id="@+id/button_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause_chronometer_button"
+        android:layout_alignBaseline="@+id/button_start"
+        android:layout_alignBottom="@+id/button_start"
+        android:layout_toRightOf="@+id/button_start"
+        android:layout_toEndOf="@+id/button_start"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_chronometer_button"
+        android:layout_alignBaseline="@+id/button_pause"
+        android:layout_alignBottom="@+id/button_pause"
+        android:layout_alignLeft="@+id/text_view_tip"
+        android:layout_alignStart="@+id/text_view_tip" />
+
+    <Chronometer
+        android:id="@+id/chronometer_time_waiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_view_time_waiting"
+        android:layout_alignBottom="@+id/text_view_time_waiting"
+        android:layout_toLeftOf="@+id/button_reset"
+        android:layout_toStartOf="@+id/button_reset" />
+
+
+</RelativeLayout>
